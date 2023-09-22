@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quiz Question</h1>
+    <p id="question-text"><%= question.question %></p>
+    <form action="/submitanswer"method="POST">
+        <input type="hidden" name="questionId" value="<%= question.originalQuestionID %>">
+        <input type="hidden" name="AnswerKey" value="<%= question.AnswerKey %>">
+        <input type="hidden" name="question" value="<%= question.question %>">
+        <ul id="options-list">
+        <li>
+            <input type="radio" name="answer"value="<%= question.option1 %>">
+            <label for="C"id="option3"><%= question.option1 %></label>
+        <li>
+            <input type="radio" name="answer"value="<%= question.option2 %>">
+            <label for="C"id="option3"><%= question.option2 %></label>
+        </li>
+        <li>
+            <input type="radio" name="answer"value="<%= question.option3 %>">
+            <label for="C"id="option3"><%= question.option3 %></label>
+        <li>
+            <input type="radio" name="answer"value="<%= question.option4 %>">
+            <label for="C"id="option3"><%= question.option1 %></label>
+        </li> 
+    </ul> 
+    <input type="submit"value="submit">
+    </form>
+   
+       
+           
+        
+  
+    <button id="next-button">Next</button>
+    <script src="user.js"></script>
+</body>
+</html>
